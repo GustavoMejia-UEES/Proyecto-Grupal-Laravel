@@ -13,7 +13,7 @@
             <p><strong>Teléfono:</strong> {{ $tienda->telefono }}</p>
             <p><strong>Email:</strong> {{ $tienda->email }}</p>
 
-            @if ($tienda->tipo === 'restaurante' && $tienda->restaurante)
+            @if($tienda->tipo === 'restaurante' && $tienda->restaurante)
                 <h4>Información del Restaurante</h4>
                 <p><strong>Tipo de Cocina:</strong> {{ $tienda->restaurante->tipo_cocina }}</p>
                 <p><strong>Horario de Apertura:</strong> {{ $tienda->restaurante->horario_apertura }}</p>
@@ -33,3 +33,4 @@
 
     <a href="{{ route('tiendas.index') }}" class="btn btn-secondary mt-3">Volver</a>
 @endsection
+

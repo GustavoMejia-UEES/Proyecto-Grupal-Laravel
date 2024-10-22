@@ -24,18 +24,15 @@ class InventarioController extends Controller
 
     public function store(Request $request)
     {
-        $request->validate([
-            'id_tienda' => 'required|exists:tiendas,id_tienda',
-            'id_producto' => 'required|exists:productos,id_producto',
-            'cantidad' => 'required|integer|min:0',
-        ]);
+        // dd($request->all()); // Verifica los datos recibidos
+        // $request->validate([
+        //     'id_tienda' => 'required|exists:tiendas,id_tienda',
+        //     'id_producto' => 'required|exists:productos,id_producto',
+        //     'cantidad' => 'required|integer|min:0',
+        // ]);
 
-        Inventario::create([
-            'id_tienda' => $request->id_tienda,
-            'id_producto' => $request->id_producto,
-            'cantidad' => $request->cantidad,
-            'fecha_actualizacion' => now(),
-        ]);
+        Inventario::create($request->all());
+        
 
         return redirect()->route('inventarios.index')->with('success', 'Inventario actualizado exitosamente.');
     }

@@ -27,18 +27,15 @@
             <h4>Información del Restaurante</h4>
             <div class="mb-3">
                 <label for="tipo_cocina" class="form-label">Tipo de Cocina</label>
-                <input type="text" class="form-control" id="tipo_cocina" name="tipo_cocina"
-                    value="{{ $tienda->restaurante->tipo_cocina ?? '' }}">
+                <input type="text" class="form-control" id="tipo_cocina" name="tipo_cocina" value="{{ $tienda->restaurante->tipo_cocina ?? '' }}">
             </div>
             <div class="mb-3">
                 <label for="horario_apertura" class="form-label">Horario de Apertura</label>
-                <input type="time" class="form-control" id="horario_apertura" name="horario_apertura"
-                    value="{{ $tienda->restaurante->horario_apertura ?? '' }}">
+                <input type="time" class="form-control" id="horario_apertura" name="horario_apertura" value="{{ $tienda->restaurante->horario_apertura ?? '' }}">
             </div>
             <div class="mb-3">
                 <label for="horario_cierre" class="form-label">Horario de Cierre</label>
-                <input type="time" class="form-control" id="horario_cierre" name="horario_cierre"
-                    value="{{ $tienda->restaurante->horario_cierre ?? '' }}">
+                <input type="time" class="form-control" id="horario_cierre" name="horario_cierre" value="{{ $tienda->restaurante->horario_cierre ?? '' }}">
             </div>
         </div>
 
@@ -46,18 +43,15 @@
             <h4>Información de la Farmacia</h4>
             <div class="mb-3">
                 <label for="licencia" class="form-label">Licencia</label>
-                <input type="text" class="form-control" id="licencia" name="licencia"
-                    value="{{ $tienda->farmacia->licencia ?? '' }}">
+                <input type="text" class="form-control" id="licencia" name="licencia" value="{{ $tienda->farmacia->licencia ?? '' }}">
             </div>
             <div class="mb-3">
                 <label for="hora_apertura" class="form-label">Hora de Apertura</label>
-                <input type="time" class="form-control" id="hora_apertura" name="hora_apertura"
-                    value="{{ $tienda->farmacia->hora_apertura ?? '' }}">
+                <input type="time" class="form-control" id="hora_apertura" name="hora_apertura" value="{{ $tienda->farmacia->hora_apertura ?? '' }}">
             </div>
             <div class="mb-3">
                 <label for="hora_cierre" class="form-label">Hora de Cierre</label>
-                <input type="time" class="form-control" id="hora_cierre" name="hora_cierre"
-                    value="{{ $tienda->farmacia->hora_cierre ?? '' }}">
+                <input type="time" class="form-control" id="hora_cierre" name="hora_cierre" value="{{ $tienda->farmacia->hora_cierre ?? '' }}">
             </div>
         </div>
 
@@ -75,20 +69,17 @@
 
         <div class="mb-3">
             <label for="direccion" class="form-label">Dirección</label>
-            <input type="text" class="form-control" id="direccion" name="direccion" value="{{ $tienda->direccion }}"
-                required>
+            <input type="text" class="form-control" id="direccion" name="direccion" value="{{ $tienda->direccion }}" required>
         </div>
 
         <div class="mb-3">
             <label for="telefono" class="form-label">Teléfono</label>
-            <input type="text" class="form-control" id="telefono" name="telefono" value="{{ $tienda->telefono }}"
-                required>
+            <input type="text" class="form-control" id="telefono" name="telefono" value="{{ $tienda->telefono }}" required>
         </div>
 
         <div class="mb-3">
             <label for="email" class="form-label">Email</label>
-            <input type="email" class="form-control" id="email" name="email" value="{{ $tienda->email }}"
-                required>
+            <input type="email" class="form-control" id="email" name="email" value="{{ $tienda->email }}" required>
         </div>
 
         <button type="submit" class="btn btn-success">Actualizar</button>
@@ -109,3 +100,4 @@
         });
     </script>
 @endsection
+

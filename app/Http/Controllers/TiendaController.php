@@ -20,13 +20,13 @@ class TiendaController extends Controller
 
     public function store(Request $request)
     {
-        $request->validate([
-            'nombre' => 'required',
-            'tipo' => 'required|in:restaurante,farmacia,supermercado',
-            'direccion' => 'required',
-            'telefono' => 'required',
-            'email' => 'required|email|unique:tiendas,email',
-        ]);
+        // $request->validate([
+        //     'nombre' => 'required',
+        //     'tipo' => 'required|in:restaurante,farmacia,supermercado',
+        //     'direccion' => 'required',
+        //     'telefono' => 'required',
+        //     'email' => 'required|email|unique:tiendas,email',
+        // ]);
 
         $tienda = Tienda::create($request->all());
 

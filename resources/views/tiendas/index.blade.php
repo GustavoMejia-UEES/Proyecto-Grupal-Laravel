@@ -19,7 +19,7 @@
             </tr>
         </thead>
         <tbody>
-            @foreach ($tiendas as $tienda)
+            @foreach($tiendas as $tienda)
                 <tr>
                     <td>{{ $tienda->id_tienda }}</td>
                     <td>{{ $tienda->nombre }}</td>
@@ -30,8 +30,7 @@
                     <td>
                         <a href="{{ route('tiendas.show', $tienda->id_tienda) }}" class="btn btn-info btn-sm">Ver</a>
                         <a href="{{ route('tiendas.edit', $tienda->id_tienda) }}" class="btn btn-warning btn-sm">Editar</a>
-                        <form action="{{ route('tiendas.destroy', $tienda->id_tienda) }}" method="POST"
-                            style="display:inline-block;">
+                        <form action="{{ route('tiendas.destroy', $tienda->id_tienda) }}" method="POST" style="display:inline-block;">
                             @csrf
                             @method('DELETE')
                             <button type="submit" class="btn btn-danger btn-sm"
@@ -43,3 +42,4 @@
         </tbody>
     </table>
 @endsection
+
